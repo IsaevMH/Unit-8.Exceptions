@@ -1,0 +1,5 @@
+package lessonExceptions.enums;
+
+public enum StudySubject {
+    MATHEMATIC, PHYSICS, INFORMATIC, TECHNOLOGY, NETWORKS, OS_ADMINISTRATIN, INFORMTATION_SECURITY
+}

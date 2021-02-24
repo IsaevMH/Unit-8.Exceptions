@@ -1,5 +1,7 @@
 package lessonExceptions.entities;
 
+import lessonExceptions.exceptions.EmptyFacultyException;
+
 import java.util.List;
 
 public class Faculty {
@@ -21,8 +23,11 @@ public class Faculty {
             return null;
     }
 
-    public Faculty(String facultyName, List<Group> groups) {
+    public Faculty(String facultyName, List<Group> groups) throws EmptyFacultyException {
         this.facultyName = facultyName;
-        this.groups = groups;
+        if(groups.size() > 0)
+            this.groups = groups;
+        else
+            throw new EmptyFacultyException("Факультет не может быть пустым. Необходимо добавить хотя бы одну группу");
     }
 }

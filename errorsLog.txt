@@ -1,0 +1,5 @@
+lessonExceptions.exceptions.IncorrectGradeException: Вы вышли за пределы диапазона оценок от 0 до 10. Вы указали: 11
+lessonExceptions.exceptions.LackOfItemsException: Список предметов не должен быть пустым. Размер списка учебных предметов: 0
+lessonExceptions.exceptions.EmptyGroupException: Учебная группа не должна быть пустой, добавьте хотя бы одного студента
+lessonExceptions.exceptions.EmptyFacultyException: Факультет не может быть пустым. Необходимо добавить хотя бы одну группу
+lessonExceptions.exceptions.EmptyUniversityException: Университет не может быть пустым. Необходимо добавить хотя бы один факультет.

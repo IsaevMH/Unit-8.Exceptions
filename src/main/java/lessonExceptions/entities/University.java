@@ -1,6 +1,7 @@
 package lessonExceptions.entities;
 
 import lessonExceptions.enums.StudySubject;
+import lessonExceptions.exceptions.EmptyUniversityException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,9 +19,12 @@ public class University {
         return faculties;
     }
 
-    public University(String universityName, List<Faculty> faculties) {
+    public University(String universityName, List<Faculty> faculties) throws EmptyUniversityException {
         this.universityName = universityName;
-        this.faculties = faculties;
+        if(faculties.size() > 0)
+            this.faculties = faculties;
+        else
+            throw new EmptyUniversityException("Университет не может быть пустым. Необходимо добавить хотя бы один факультет.");
 
     }
 
